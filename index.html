@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> REGISTRATION FORM</title>
+    <style>
+        body{
+            min-width: 100vw;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: bisque;
+
+        }
+        .res{
+            width: min(90%,1000px);
+            margin-inline: auto;
+        }
+
+    </style>
+</head>
+<body>
+<form class="res" action="">
+    <label class="pad">NAME : <input type="text"></label><br><br>
+    <label class="pad">EMAIL : <input type="email"></label><br><br>
+    <label class="pad">PH.NO : <input type="number"></label><br><br>
+    <p><b>Select your option : </b></p><select name="option">
+        <option value="Query">Query</option>
+        <option value="Feedback">Feedback</option>
+        <option value="Complaint">Complaint</option>
+        <option value="Other">Other</option>
+    </select><br><br>
+    <textarea name="editor" id="editor" cols="30" rows="10"></textarea>
+    <input type="submit" value="submit">
+</form>
+<script src="ckeditor/ckeditor.js"></script>
+<script>
+    ClassicEditor.create(document.getElementById('editor'));
+</script>
+</body>
+</html>
